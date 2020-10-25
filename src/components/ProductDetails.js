@@ -37,9 +37,9 @@ function ProductDetails() {
                             </div>
                         </div>
                         {/* <!-- Shopping Cart Button --> */}
-                        <div class="shopping-cart-button">
+                        <button class="shopping-cart-button">
                             <img src={cart} alt="shopping cart"/>
-                        </div>
+                        </button>
                     </div>
                     {/* <!-- Other information --> */}
                     <div class="detail-columns">

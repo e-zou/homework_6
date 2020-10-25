@@ -34,6 +34,7 @@ function Cart() {
 leather collar...</p>
                     <p class="detail"><span class="bold">Color: </span> Red</p>
                     <p class="detail"><span class="bold">Size: </span> Small</p>
+                    <p class="detail"><span class="bold">Quantity: </span> 1</p>
                 </div>
 
               </div>
@@ -59,6 +60,7 @@ leather collar...</p>
 leather collar...</p>
                     <p><span class="bold">Color: </span> Red</p>
                     <p><span class="bold">Size: </span> Small</p>
+                    <p class="detail"><span class="bold">Quantity: </span> 1</p>
                 </div>
 
               </div>
@@ -84,6 +86,7 @@ leather collar...</p>
 leather collar...</p>
                     <p><span class="bold">Color: </span> Red</p>
                     <p><span class="bold">Size: </span> Small</p>
+                    <p class="detail"><span class="bold">Quantity: </span> 1</p>
                 </div>
 
               </div>
