@@ -1,6 +1,5 @@
 import logo from '../images/logo.png';
 import shoppingCart from '../images/shopping-cart.png';
-import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
 function Navigation(props) {

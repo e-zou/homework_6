@@ -5,6 +5,7 @@ import img1 from '../images/home/item1.png';
 import img2 from '../images/home/item2.png';
 import img3 from '../images/home/item3.png';
 
+import { Link, withRouter } from "react-router-dom";
 
 
 function Home() {
@@ -16,9 +17,9 @@ function Home() {
           <div class="overlay">
               <h1 class="hero-header">Muddy Paws<br/>Adventure</h1>
               <h3 class="hero-tagline">Hand-crafted and ethically-made <br/>custom pet gear</h3>
-              <div class="shop-now-button"><a href="products.html">
+              <div class="shop-now-button"><Link to="/products">
                       <p>SHOP NOW</p>
-                  </a></div>
+                  </Link></div>
           </div>
       </div>
 

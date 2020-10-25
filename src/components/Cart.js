@@ -32,6 +32,31 @@ function Cart() {
                     </div>
                     <p class="description">Stylish and dazzling jewels securly embedded into a black,
 leather collar...</p>
+                    <p class="detail"><span class="bold">Color: </span> Red</p>
+                    <p class="detail"><span class="bold">Size: </span> Small</p>
+                </div>
+
+              </div>
+              <button class="delete"><p>DELETE</p></button>
+            </div>
+
+            <div class="items-card">
+              <div class="item-info">
+                <img class="item-img" src={item2}/>
+                <div class="item-text">
+                    <div class="title-price">
+                      <h4 class="title">Jeweled Collar </h4>
+                      <h4 class="price">$19.99</h4>
+                    </div>
+                    <div class="stars">
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                    </div>
+                    <p class="description">Stylish and dazzling jewels securly embedded into a black,
+leather collar...</p>
                     <p><span class="bold">Color: </span> Red</p>
                     <p><span class="bold">Size: </span> Small</p>
                 </div>
@@ -39,6 +64,34 @@ leather collar...</p>
               </div>
               <button class="delete"><p>DELETE</p></button>
             </div>
+
+            <div class="items-card">
+              <div class="item-info">
+                <img class="item-img" src={item3}/>
+                <div class="item-text">
+                    <div class="title-price">
+                      <h4 class="title">Jeweled Collar </h4>
+                      <h4 class="price">$19.99</h4>
+                    </div>
+                    <div class="stars">
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                      <FontAwesomeIcon color="#D9CC5E" icon={faStar}/>
+                    </div>
+                    <p class="description">Stylish and dazzling jewels securly embedded into a black,
+leather collar...</p>
+                    <p><span class="bold">Color: </span> Red</p>
+                    <p><span class="bold">Size: </span> Small</p>
+                </div>
+
+              </div>
+              <button class="delete"><p>DELETE</p></button>
+            </div>
+
+
+
           </div>
         </section>
       </body>
