@@ -1,0 +1,204 @@
+/*********************************/
+/***** PRODUCT DETAILS PAGE ******/
+/*********************************/
+
+/***** Details Section *****/
+.details {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    
+}
+.details-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;   
+    padding-top: 75px;
+    padding-bottom: 150px;
+}
+
+
+.detail-heading {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+/*    border: solid 1px hotpink;*/
+    margin-bottom: 50px;
+}
+.detail-title {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+/*    border: solid 1px green;*/
+}
+
+.detail1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail1 > h2 {
+    margin-bottom: 10px;
+}
+
+.detail1 > p {
+/*    asdfa;skdljfa;slkj*/
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.detail2 {
+    display: flex;
+    flex-direction: row;
+}
+/* End of Details Section */
+
+/***** Shopping Cart *****/
+.shopping-cart-button {
+    background-color: #242323;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* End of Shopping Cart */
+
+/***** Gallery *****/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    max-height: 600px;
+/*    border: 1px pink solid;*/
+}
+
+.gallery > .big_image {
+    grid-column: 1/6;
+    width: 100%;
+}
+.gallery > .small_image1 {
+    grid-column: 1/2;
+}
+.gallery > .small_image2 {
+    grid-column: 2/3;
+}
+/* End of Gallery */
+
+/***** Product Details *****/
+
+.detail-columns {
+/*    border: 1px solid blue;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-columns > .left-column {
+/*    border: 1px solid purple;*/
+    width: 60%;
+}
+.detail-columns > .right-column {
+/*    border: 1px solid red;*/
+    width: 40%;
+    padding-left: 50px;
+}
+
+.detail-columns > .right-column > .description > ul > li {
+    margin-left: 15px;
+}
+
+
+.name {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.name-and-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.review-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 65px;
+    height: 150px;
+/*    border: 1px blue solid;*/
+}
+
+.review-num {
+   font-family: 'Barlow', sans-serif;
+}
+
+.review-card > .title {
+   font-weight: bold;
+}
+
+.description > h4 {
+    font-size: 24px;
+}
+
+.product-color-wrapper > h5 , .size > h5 {
+    color: black;
+    font-weight: bold;
+}
+
+.size {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 125px;
+    height: 50px;
+}
+
+.size > h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.size > img {
+    height: 7px;
+}
+
+.product-color-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+    height: 50px;
+}
+
+.product-color {
+    width: 35px;
+    height: 25px;
+}
+
+/****** Product Coloring ******/
+
+/* Strawberry */
+#color1 {
+    background-color: #DC5252;
+}
+/* Blackberry */
+#color2 {
+    background-color: #211D24;
+}
+/* Crazuberry */
+#color3 {
+    background-color: #573176;
+}
+/* Fire Orange */
+#color4 {
+    background-color: #C88242;
+}
+
+/* Product Coloring */

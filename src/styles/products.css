@@ -1,0 +1,84 @@
+/**************************/
+/***** PRODUCTS PAGE ******/
+/**************************/
+
+/***** General Products Section *****/
+.products {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.products-wrapper {
+    grid-column: 2/3;
+    padding-top: 75px;
+    padding-bottom: 150px;
+}
+/* End of General Products Section */
+
+/***** Filters *****/
+.filters {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: space-between;
+    margin-bottom: 125px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.filter-label {
+    margin-right: 5px;
+}
+/* End of Filters */
+
+/***** Product Gallery *****/
+.product-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.product-card > a {
+    width: 100%;
+    
+}
+
+.product-card > a > img {
+    width: 100%;
+    
+}
+.product-text > .name-and-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-text > .rating-and-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-text > .rating-and-cart > .rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* End of Product Gallery */

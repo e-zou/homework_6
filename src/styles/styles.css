@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300,400;600&display=swap');
+
+/**************************/
+/****** STYLES PAGE ******/
+/*************************/
+
+
+/***** PRESETS *****/
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: #383838;
+}
+
+h1, h2, h3, h4, h5, li {
+    font-family: 'Barlow', sans-serif;
+    color: #383838;
+}
+
+h1 {
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 300;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h3 {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 36px;
+/*    font-weight: 300;*/
+    
+}
+
+h5 {
+    font-size: 18px;
+    color: #A1A493;
+    font-weight: 300;
+}
+
+/* stars */
+.checked {
+  color: #D9CC5E;
+}
+
+
+/* END OF PRESETS */
+
+
+/****** NAVBAR *******/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+/*    border-bottom: solid #999 2px;*/
+    box-shadow: 0 8px 5px -10px #999;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    margin-bottom: 50px;
+
+}
+
+.logo {
+    margin-left: 8%;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.notif {
+    position: absolute;
+    background-color: #B74848;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.notif > p {
+    color: white;
+    font-size: 10px;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Roboto Condensed', sans-serif;
+/*    border: 1px solid hotpink;*/
+    
+}
+
+.menu > a {
+    width: 100px;
+/*    border: 1px solid blue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #79796B;
+}
+/* END OF NAVBAR */
+
+section {
+    margin-top: 50px;
+}
+
+/****** Footer *******/
+.footer {
+    display: flex;
+    width: 100%;
+    height: 112px;
+    background-color: #383838;
+    color: white;
+    justify-content: center;
+    
+}
+
+.footer-info {
+    width: 80%;
+/*    border: solid 1px pink;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+}
+
+.footer-info > p {
+    color: white;
+}
+
+.footer-info > p > a {
+    color: #49A6DA;
+}
+
+/* END OF FOOTER */
+
+
+/***** END OF STYLES *****/
