@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Provider is like the context state
+import { Provider } from 'react-redux';
+import store from "./redux/store";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* prop imported from redux folder */}
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

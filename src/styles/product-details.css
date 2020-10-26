@@ -78,10 +78,20 @@
 /*    border: 1px pink solid;*/
 }
 
-.gallery > .big_image {
+.img-crop {
     grid-column: 1/6;
     width: 100%;
+    height: 450px; 
+    overflow: hidden;
+    
 }
+/* redownload images later */
+.big_image {
+    /* grid-column: 1/6; */
+    width: 100%;
+    margin-top: -300px;
+}
+
 .gallery > .small_image1 {
     grid-column: 1/2;
 }

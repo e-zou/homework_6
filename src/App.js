@@ -1,17 +1,23 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// Pages
 import Navigation from "./components/Navigation.js";
 import Home from "./components/Home.js";
 import Cart from "./components/Cart.js";
 import Products from "./components/Products.js";
 import ProductDetails from "./components/ProductDetails.js";
 
+// React
+import { connect } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Redirect } from 'react-router';
+
+// Styles
 import './styles/styles.css';
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
-function App() {
+function App({ current }) {
   return (
     <div className="App">
       <Router>
@@ -20,11 +26,21 @@ function App() {
           <Route path="/" exact component={() => <Home/>} />
           <Route path="/cart" exact component={() => <Cart/>} />
           <Route path="/products" exact component={() => <Products/>} />
-          <Route path="/productDetails" exact component={() => <ProductDetails/>} />
+          {!current ? (
+            <Redirect to="/products" />
+          ) : (
+            <Route exact path="/products/:id" component={ ()=> <ProductDetails/> }/>
+          )}
         </Switch>
       </Router>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
+
+export default connect(mapStateToProps)(App);
