@@ -13,15 +13,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { connect, useSelector } from "react-redux";
 import { addToCart, changeColor, changeSize } from "../redux/shopping/shopping-actions";
-import {shopReducer} from '../redux/shopping/shopping-reducer';
+import { shopReducer } from '../redux/shopping/shopping-reducer';
 
 function ProductDetails({ current, addToCart, changeColor, changeSize }) {
     console.log(current);
 
     let colorDict = {
-        "red": bigImage,
-        "black": smallImg1,
-        "purple": smallImg2
+        "strawberry": current.img,
+        "blackberry": smallImg1,
+        "purpleberry": bigImage,
+        "fire orange": smallImg2,
     }
 
     return (
@@ -50,9 +51,12 @@ function ProductDetails({ current, addToCart, changeColor, changeSize }) {
                                 </div>
                             </div>
                             {/* <!-- Shopping Cart Button --> */}
-                            <button onClick={() => addToCart(current.id)} class="shopping-cart-button">
-                                <img src={cart} alt="shopping cart" />
-                            </button>
+                            <div>
+                                <button onClick={() => addToCart(current.id)} class="shopping-cart-button">
+                                    <img src={cart} alt="shopping cart" />
+                                </button>
+                                <p>Add to Cart</p>
+                            </div>
                         </div>
                         {/* <!-- Other information --> */}
                         <div class="detail-columns">
@@ -129,17 +133,20 @@ function ProductDetails({ current, addToCart, changeColor, changeSize }) {
                                     <div class="size">
                                         <h5>Size: </h5>
                                         <button onClick={() => changeSize(current.id, "small")}>SMALL</button>
-                                        <button onClick={() => changeSize(current.id, "medium")}><p>MEDIUM</p><img src={arrow} alt="arrow" /></button>
-                                        <button onClick={() => changeSize(current.id, "large")}>Large</button>
+                                        <button onClick={() => changeSize(current.id, "medium")}>MEDIUM</button>
+                                        <button onClick={() => changeSize(current.id, "large")}>LARGE</button>
                                     </div>
                                     {/* <!-- Colors: Strawberry, Blackberry, Crazyberry, Fire Orange --> */}
                                     <div class="product-color-wrapper">
                                         <h5>Color: </h5>
-                                        <button class="product-color" id="color1" 
-                                        value="1" onClick={() => changeColor(current.id, "red")}></button>
-                                        <button class="product-color" id="color2" value="2" onClick={() => changeColor(current.id, "black")}></button>
-                                        <button class="product-color" id="color3" value="3" onClick={() => changeColor(current.id, "purple")}></button>
-                                        <button class="product-color" id="color4" value="4" onClick={() => changeColor(current.id, "orange")}></button>
+                                        <button class="product-color" id="color1"
+                                            value="1" onClick={() => changeColor(current.id, "strawberry")}></button>
+                                        <button class="product-color" id="color2" value="2" onClick={() => changeColor(current.id, "blackberry")}></button>
+                                        <button class="product-color" id="color3" value="3" onClick={() => changeColor(current.id, "crazyberry")}></button>
+                                        <button class="product-color" id="color4" value="4" onClick={() => changeColor(current.id, "fire orange")}></button>
+                                    </div>
+                                    <div>
+                                        <p>Selecting: {current.size}, {current.color}</p>
                                     </div>
                                 </div>
                             </div>
@@ -147,14 +154,6 @@ function ProductDetails({ current, addToCart, changeColor, changeSize }) {
 
                     </div>
                 </section>
-
-
-                <div class="footer">
-                    <div class="footer-info">
-                        <p>© MPA Inc. 2020</p>
-                        <p>Contact:<a href="jenferson@mpa.com"> jenferson@mpa.com</a></p>
-                    </div>
-                </div>
             </body>
 
 

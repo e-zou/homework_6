@@ -4,6 +4,7 @@ import Home from "./components/Home.js";
 import Cart from "./components/Cart.js";
 import Products from "./components/Products.js";
 import ProductDetails from "./components/ProductDetails.js";
+import Footer from "./components/Footer.js";
 
 // React
 import { connect } from "react-redux";
@@ -33,6 +34,7 @@ function App({ current }) {
             <Route exact path="/products/:id" component={ ()=> <ProductDetails/> }/>
           )}
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );

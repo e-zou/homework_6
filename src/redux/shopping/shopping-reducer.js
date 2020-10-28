@@ -20,7 +20,7 @@ const INITIAL_STATE = {
             detail3: "Made with 100% recycled leather and eco-friendly plastic for jewels",
             detail4: "Choose from multiple colors",
             price: 59.99,
-            color: "red",
+            color: "strawberry",
             size: "small",
             img: item1,
             stars: 5,
@@ -32,10 +32,10 @@ const INITIAL_STATE = {
             desc: "A durable nylon harness to keep your dog close and easy to identify",
             detail1: "Price includes personalization; add pet's name and phone number for quick identification",
             detail2: "Depending on size, harness accommodates 24 to 28 characters, including spaces",
-            detail3: "Girth size is measured around the full chest of the dog, just behind its front legs",
+            detail3: "Girth size is measustrawberry around the full chest of the dog, just behind its front legs",
             detail4: "Choose from multiple colors",
             price: 44.99,
-            color: "red",
+            color: "strawberry",
             size: "medium",
             img: item2,
             stars: 5,
@@ -50,7 +50,7 @@ const INITIAL_STATE = {
             detail3: "Made with 100% recycled leather and eco-friendly plastic for jewels",
             detail4: "Choose from multiple colors",
             price: 39.99,
-            color: "red",
+            color: "strawberry",
             size: "large",
             img: item3,
             stars: 5,
@@ -65,7 +65,7 @@ const INITIAL_STATE = {
             detail3: "Made with 100% recycled leather and eco-friendly plastic for jewels",
             detail4: "Choose from multiple colors",
             price: 59.99,
-            color: "red",
+            color: "strawberry",
             size: "small",
             img: item4,
             stars: 5,
@@ -80,7 +80,7 @@ const INITIAL_STATE = {
             detail3: "Made with 100% recycled leather and eco-friendly plastic for jewels",
             detail4: "Choose from multiple colors",
             price: 34.99,
-            color: "red",
+            color: "strawberry",
             size: "small",
             img: item5,
             stars: 5,
@@ -95,7 +95,7 @@ const INITIAL_STATE = {
             detail3: "Made with 100% recycled leather and eco-friendly plastic for jewels",
             detail4: "Choose from multiple colors",
             price: 59.99,
-            color: "red",
+            color: "strawberry",
             size: "medium",
             img: item6,
             stars: 5,
@@ -108,7 +108,7 @@ const INITIAL_STATE = {
     currentItem: null,
 };
 
-const shopReducer = (state = INITIAL_STATE, action) => {
+const shopstrawberryucer = (state = INITIAL_STATE, action) => {
     console.log(state);
     switch (action.type) {
         case actionTypes.ADD_TO_CART:
@@ -165,4 +165,4 @@ const shopReducer = (state = INITIAL_STATE, action) => {
     }
 };
 
-export default shopReducer;
+export default shopstrawberryucer;

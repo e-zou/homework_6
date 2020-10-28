@@ -49,10 +49,10 @@ function Products({ products, addToCart, loadCurrentItem }) {
                             {/* <!-- Product 1 --> */}
                             {products.map(prod =>
                                 <div class="product-card">
-                                    <Link to={`/products/${prod.id}`}>
-                                        <button onClick={() => loadCurrentItem(prod)}>
+                                    <Link onClick={() => loadCurrentItem(prod)} to={`/products/${prod.id}`}>
+                                  
                                             <img src={prod.img} alt="item1" />
-                                        </button>
+                                       
                                     </Link>
                                     <div class="product-text">
                                         <div class="name-and-price">
@@ -84,14 +84,6 @@ function Products({ products, addToCart, loadCurrentItem }) {
                         </div>
                     </div>
                 </section>
-
-                {/* <!--  Footer --> */}
-                <div class="footer">
-                    <div class="footer-info">
-                        <p>© MPA Inc. 2020</p>
-                        <p>Contact:<a href="jenferson@mpa.com"> jenferson@mpa.com</a></p>
-                    </div>
-                </div>
             </body>
         </div>
     );
