@@ -6,14 +6,24 @@ import smallImg1 from '../images/product-details/small-detail1.png';
 import smallImg2 from '../images/product-details/small-detail2.png';
 import arrow from '../images/products/sort-arrow.png';
 import cart from '../images/white-cart.png';
+import { useStore } from 'react-redux';
 
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { connect } from "react-redux";
-import { addToCart } from "../redux/shopping/shopping-actions";
+import { connect, useSelector } from "react-redux";
+import { addToCart, changeColor, changeSize } from "../redux/shopping/shopping-actions";
+import {shopReducer} from '../redux/shopping/shopping-reducer';
 
-function ProductDetails({ current, addToCart }) {
+function ProductDetails({ current, addToCart, changeColor, changeSize }) {
+    console.log(current);
+
+    let colorDict = {
+        "red": bigImage,
+        "black": smallImg1,
+        "purple": smallImg2
+    }
+
     return (
         <div class="product-details-container">
 
@@ -50,7 +60,7 @@ function ProductDetails({ current, addToCart }) {
                             <div class="left-column">
                                 <div class="gallery">
                                     <div class="img-crop">
-                                        <img class="big_image" src={current.img} alt="big_image" />
+                                        <img class="big_image" src={colorDict[current.color]} alt="big_image" />
                                     </div>
                                     <img class="small_image1" src={smallImg1} alt="small_image" />
                                     <img class="small_image2" src={smallImg2} alt="small_image2" />
@@ -118,15 +128,18 @@ function ProductDetails({ current, addToCart }) {
                                     {/* <!-- Sizes: Tiny, Small, Medium, Large --> */}
                                     <div class="size">
                                         <h5>Size: </h5>
-                                        <p>MEDIUM</p><img src={arrow} alt="arrow" />
+                                        <button onClick={() => changeSize(current.id, "small")}>SMALL</button>
+                                        <button onClick={() => changeSize(current.id, "medium")}><p>MEDIUM</p><img src={arrow} alt="arrow" /></button>
+                                        <button onClick={() => changeSize(current.id, "large")}>Large</button>
                                     </div>
                                     {/* <!-- Colors: Strawberry, Blackberry, Crazyberry, Fire Orange --> */}
                                     <div class="product-color-wrapper">
                                         <h5>Color: </h5>
-                                        <div class="product-color" id="color1"></div>
-                                        <div class="product-color" id="color2"></div>
-                                        <div class="product-color" id="color3"></div>
-                                        <div class="product-color" id="color4"></div>
+                                        <button class="product-color" id="color1" 
+                                        value="1" onClick={() => changeColor(current.id, "red")}></button>
+                                        <button class="product-color" id="color2" value="2" onClick={() => changeColor(current.id, "black")}></button>
+                                        <button class="product-color" id="color3" value="3" onClick={() => changeColor(current.id, "purple")}></button>
+                                        <button class="product-color" id="color4" value="4" onClick={() => changeColor(current.id, "orange")}></button>
                                     </div>
                                 </div>
                             </div>
@@ -158,8 +171,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addToCart: (id) => dispatch(addToCart(id)),
+        changeColor: (id, value) => dispatch(changeColor(id, value)),
+        changeSize: (id, value) => dispatch(changeSize(id, value))
     };
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);

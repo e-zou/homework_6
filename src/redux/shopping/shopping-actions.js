@@ -36,3 +36,24 @@ export const loadCurrentItem = (item) => {
         payload: item,
     }
 }
+
+export const changeColor = (itemID, value) => {
+    console.log("Changing item id: ", itemID, " with value: ", value);
+    return {
+        type: actionTypes.CHANGE_ITEM_COLOR,
+        payload: {
+            id: itemID,
+            color: value,
+        }
+    }
+}
+
+export const changeSize = (itemID, value) => {
+    return {
+        type: actionTypes.CHANGE_ITEM_SIZE,
+        payload: {
+            id: itemID,
+            size: value,
+        }
+    }
+}

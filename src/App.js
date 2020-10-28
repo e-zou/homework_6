@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function App({ current }) {
+  console.log(current);
   return (
     <div className="App">
       <Router>

@@ -109,6 +109,7 @@ const INITIAL_STATE = {
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
+    console.log(state);
     switch (action.type) {
         case actionTypes.ADD_TO_CART:
             // Get items data from products array
@@ -118,11 +119,11 @@ const shopReducer = (state = INITIAL_STATE, action) => {
             return {
                 // spread the state
                 ...state,
-                // if is in the cart, map throu
+                // if is in the cart, map through
                 cart: inCart
                     ? state.cart.map(item =>
                         item.id === action.payload.id
-                            ? { ...item, qty: item.qty + 1 }
+                            ? { ...item, qty: item.qty + 1, color: state.currentItem.color, size: state.currentItem.size }
                             : item)
                     // create array and add to state of cart
                     : [...state.cart, { ...item, qty: 1 }],
@@ -143,6 +144,22 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 currentItem: action.payload,
             };
+        case actionTypes.CHANGE_ITEM_COLOR:
+                return {
+                    ...state,
+                    
+                    // cart: state.cart.map(item => item.id === action.payload.id ? { ...item, color: action.payload.color } : item),
+                    currentItem: state.currentItem.id === action.payload.id ? { ...state.currentItem, color: action.payload.color } : item
+
+                };
+        case actionTypes.CHANGE_ITEM_SIZE:
+                return {
+                    ...state,
+                    currentItem: state.currentItem.id === action.payload.id ? { ...state.currentItem, size: action.payload.size } : item
+
+                    // currentItem: currentItem.id === action.payload.id ? { ...item, color: action.payload.size } : item
+
+                }
         default:
             return state;
     }
