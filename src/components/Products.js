@@ -68,7 +68,7 @@ function Products({ products, addToCart, loadCurrentItem }) {
                                                 </div>
                                                 <p class="review"> - {prod.numReviews}</p>
                                             </div>
-                                            <button onClick={() => addToCart(prod.id)}>
+                                            <button class="add-to-cart" onClick={() => addToCart(prod.id)}>
                                                 <img src={blackCart} alt="cart" class="cart" />
                                             </button>
                                         </div>

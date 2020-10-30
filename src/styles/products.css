@@ -82,3 +82,11 @@
     align-items: center;
 }
 /* End of Product Gallery */
+
+/***** Button *****/
+.add-to-cart {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+}
