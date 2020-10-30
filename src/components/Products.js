@@ -50,9 +50,7 @@ function Products({ products, addToCart, loadCurrentItem }) {
                             {products.map(prod =>
                                 <div class="product-card">
                                     <Link onClick={() => loadCurrentItem(prod)} to={`/products/${prod.id}`}>
-                                  
-                                            <img src={prod.img} alt="item1" />
-                                       
+                                        <img src={prod.img} alt="item" />
                                     </Link>
                                     <div class="product-text">
                                         <div class="name-and-price">

@@ -3,17 +3,14 @@ import React, { useState, useEffect } from "react";
 import '../styles/styles.css';
 import '../styles/shopping-cart.css';
 
-import item1 from '../images/products/item1.png';
-import item2 from '../images/products/item2.png';
-import item3 from '../images/products/item3.png';
-
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { connect } from "react-redux";
-import { adjustItemQty, removeFromCart } from "../redux/shopping/shopping-actions";
+// To-Do: adj quantity import { adjustItemQty, removeFromCart } from "../redux/shopping/shopping-actions";
+import { removeFromCart } from "../redux/shopping/shopping-actions";
 
-function Cart({ cart, adjustItemQty, removeFromCart }) {
+function Cart({ cart, removeFromCart }) {
 
 
   const [totalPrice, setTotalPrice] = useState(0);
@@ -43,7 +40,7 @@ function Cart({ cart, adjustItemQty, removeFromCart }) {
             {cart.map((item) => (
               <div class="items-card">
                 <div class="item-info">
-                  <img class="item-img" src={item.img} />
+                  <img class="item-img" src={item.img} alt="item"/>
                   <div class="item-text">
                     <div class="title-price">
                       <h4 class="title">{item.title}</h4>

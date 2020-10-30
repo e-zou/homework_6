@@ -86,11 +86,11 @@
     
 }
 /* redownload images later */
-.big_image {
+/* .big_image { */
     /* grid-column: 1/6; */
-    width: 100%;
-    margin-top: -300px;
-}
+    /* width: 100%; */
+    /* margin-top: -300px; */
+/* } */
 
 .gallery > .small_image1 {
     grid-column: 1/2;
@@ -231,7 +231,7 @@
 #color2 {
     background-color: #211D24;
 }
-/* Crazuberry */
+/* Crazyberry */
 #color3 {
     background-color: #573176;
 }

@@ -5,7 +5,7 @@ import img1 from '../images/home/item1.png';
 import img2 from '../images/home/item2.png';
 import img3 from '../images/home/item3.png';
 
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Home() {

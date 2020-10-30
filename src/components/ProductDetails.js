@@ -1,32 +1,43 @@
 import '../styles/styles.css';
 import '../styles/product-details.css';
 
-import bigImage from '../images/product-details/detail1.png';
-import smallImg1 from '../images/product-details/small-detail1.png';
-import smallImg2 from '../images/product-details/small-detail2.png';
-import arrow from '../images/products/sort-arrow.png';
+// import arrow from '../images/products/sort-arrow.png';
 import cart from '../images/white-cart.png';
-import { useStore } from 'react-redux';
+// import { useStore } from 'react-redux';
 
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { addToCart, changeColor, changeSize } from "../redux/shopping/shopping-actions";
-import React, { useState } from 'react';
+import React from 'react';
 
 
 function ProductDetails({ current, addToCart, changeColor, changeSize }) {
-    // console.log(current);
+    console.log(current.img);
 
-
+    // Mapping colors to the images
     let colorDict = {
-        "strawberry": current.img,
-        "blackberry": smallImg1,
-        "purpleberry": bigImage,
-        "fire orange": smallImg2,
+        // Need to update each big img
+        "strawberry": current.img_big_red,
+        "blackberry": current.img_big_black,
+        "crazyberry": current.img_big_purple,
+        "fire orange": current.img_big_orange,
     }
 
+    let smallcolorDict1 = {
+        "strawberry": current.img_small1_red,
+        "blackberry": current.img_small1_black,
+        "crazyberry": current.img_small1_purple,
+        "fire orange": current.img_small1_orange,
+    }
+
+    let smallcolorDict2 = {
+        "strawberry": current.img_small2_red,
+        "blackberry": current.img_small2_black,
+        "crazyberry": current.img_small2_purple,
+        "fire orange": current.img_small2_orange,
+    }
 
 
     return (
@@ -70,8 +81,8 @@ function ProductDetails({ current, addToCart, changeColor, changeSize }) {
                                     <div class="img-crop">
                                         <img class="big_image" src={colorDict[current.color]} alt="big_image" />
                                     </div>
-                                    <img class="small_image1" src={smallImg1} alt="small_image" />
-                                    <img class="small_image2" src={smallImg2} alt="small_image2" />
+                                    <img class="small_image1" src={smallcolorDict1[current.color]} alt="small_image" />
+                                    <img class="small_image2" src={smallcolorDict2[current.color]} alt="small_image2" />
                                 </div>
                                 <div class="review-section">
                                     <h2>REVIEWS</h2>

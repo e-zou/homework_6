@@ -13,8 +13,7 @@ import { Redirect } from 'react-router';
 
 // Styles
 import './styles/styles.css';
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 
