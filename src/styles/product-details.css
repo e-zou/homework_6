@@ -179,6 +179,10 @@
     height: 7px;
 }
 
+/****** Product Buttons ******/
+.shopping-cart-button {
+    
+}
 .product-color-wrapper {
     display: flex;
     flex-direction: row;
@@ -190,7 +194,32 @@
 .product-color {
     width: 35px;
     height: 25px;
+    cursor: pointer;
 }
+.product-color {
+    /* border: 1px solid black; */
+    outline: none;
+}
+
+.size-btn {
+    border: 1px solid black;
+    outline: none;
+    /* width: 35px; */
+    height: 25px;
+    margin-right: 3px;
+    margin-left: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+*:focus {
+    outline: 0;
+}
+
+/* End of Product Buttons */
 
 /****** Product Coloring ******/
 
@@ -211,4 +240,6 @@
     background-color: #C88242;
 }
 
-/* Product Coloring */
+/* End of roduct Coloring */
+
+
