@@ -75,6 +75,7 @@ function Cart({ cart, removeFromCart }) {
             ))}
           </div>
           <div class="totals">
+            <button class="checkout"><p>PURCHASE</p></button>
             <h4>Total Items: {totalItems}</h4>
             <h4>Total Price: ${totalPrice}</h4>
           </div>
