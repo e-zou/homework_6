@@ -25,6 +25,7 @@
 .hero {
     background-image: url("../images/home/home-hero.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 650px;
     display: flex;
